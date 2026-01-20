@@ -37,6 +37,12 @@
 		icon: 'ArrowsAltOutlined',
 	},
 	{
+		path: '/products',
+		name: 'Product Management',
+		icon: 'TableOutlined',
+		component: './ProductManagement',
+	},
+	{
 		path: '/todo-list',
 		name: 'TodoList',
 		icon: 'OrderedListOutlined',
