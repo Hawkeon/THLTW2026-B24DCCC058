@@ -21,8 +21,20 @@
 	{
 		path: '/dashboard',
 		name: 'Dashboard',
-		component: './TrangChu',
-		icon: 'HomeOutlined',
+		component: './Dashboard',
+		icon: 'DashboardOutlined',
+	},
+	{
+		path: '/products',
+		name: 'Product Management',
+		component: './Products',
+		icon: 'DatabaseOutlined',
+	},
+	{
+		path: '/orders',
+		name: 'Order Management',
+		component: './Orders',
+		icon: 'ShoppingCartOutlined',
 	},
 	{
 		path: '/gioi-thieu',
@@ -35,12 +47,7 @@
 		name: 'RandomUser',
 		component: './RandomUser',
 		icon: 'ArrowsAltOutlined',
-	},
-	{
-		path: '/products',
-		name: 'Product Management',
-		icon: 'TableOutlined',
-		component: './ProductManagement',
+		hideInMenu: true,
 	},
 	{
 		path: '/todo-list',
