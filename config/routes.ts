@@ -48,6 +48,18 @@
 		icon: 'OrderedListOutlined',
 		component: './TodoList',
 	},
+	{
+		path: '/guessing-game',
+		name: 'Guessing Game',
+		icon: 'TrophyOutlined',
+		component: './GuessingGame',
+	},
+	{
+		path: '/study-tracker',
+		name: 'Study Tracker',
+		icon: 'BookOutlined',
+		component: './StudyTracker',
+	},
 
 	// DANH MUC HE THONG
 	// {
