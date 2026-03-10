@@ -19,6 +19,18 @@
 	///////////////////////////////////
 	// DEFAULT MENU
 	{
+		path: '/rock-paper-scissors',
+		name: 'Oẳn Tù Tì',
+		component: './RockPaperScissors',
+		icon: 'PlaySquareOutlined',
+	},
+	{
+		path: '/question-bank',
+		name: 'Ngân hàng câu hỏi',
+		component: './QuestionBank',
+		icon: 'AppstoreOutlined',
+	},
+	{
 		path: '/dashboard',
 		name: 'Dashboard',
 		component: './TrangChu',
