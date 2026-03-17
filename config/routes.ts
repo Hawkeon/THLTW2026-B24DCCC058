@@ -1,4 +1,4 @@
-﻿export default [
+export default [
 	{
 		path: '/user',
 		layout: false,
@@ -30,6 +30,39 @@
 		component: './TienIch/GioiThieu',
 		hideInMenu: true,
 	},
+
+      {
+        path: '/booking',
+        name: 'Quản lý Đặt lịch',
+        icon: 'calendar',
+        routes: [
+          {
+            path: '/booking/staff',
+            name: 'Nhân viên',
+            component: './StaffManagement',
+          },
+          {
+            path: '/booking/services',
+            name: 'Dịch vụ',
+            component: './ServiceManagement',
+          },
+          {
+            path: '/booking/appointments',
+            name: 'Lịch hẹn',
+            component: './AppointmentManagement',
+          },
+          {
+            path: '/booking/reviews',
+            name: 'Đánh giá',
+            component: './Reviews',
+          },
+          {
+            path: '/booking/reports',
+            name: 'Báo cáo',
+            component: './Reports',
+          },
+        ],
+      },
 	{
 		path: '/random-user',
 		name: 'RandomUser',
