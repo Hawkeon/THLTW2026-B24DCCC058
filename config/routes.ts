@@ -1,4 +1,4 @@
-﻿export default [
+export default [
 	{
 		path: '/user',
 		layout: false,
@@ -42,8 +42,38 @@
 		icon: 'OrderedListOutlined',
 		component: './TodoList',
 	},
-
-	// DANH MUC HE THONG
+	{
+		name: 'Quản lý văn bằng',
+		path: '/quan-ly-van-bang',
+		icon: 'ReadOutlined',
+		routes: [
+			{
+				name: 'Sổ văn bằng',
+				path: 'so-van-bang',
+				component: './DiplomaManagement/RegistryList',
+			},
+			{
+				name: 'Quyết định tốt nghiệp',
+				path: 'quyet-dinh',
+				component: './DiplomaManagement/DecisionList',
+			},
+			{
+				name: 'Cấu hình biểu mẫu',
+				path: 'cau-hinh',
+				component: './DiplomaManagement/TemplateConfig',
+			},
+			{
+				name: 'Thông tin văn bằng',
+				path: 'thong-tin',
+				component: './DiplomaManagement/DiplomaList',
+			},
+			{
+				name: 'Tra cứu văn bằng',
+				path: 'tra-cuu',
+				component: './DiplomaManagement/DiplomaLookup',
+			},
+		],
+	},
 	// {
 	// 	name: 'DanhMuc',
 	// 	path: '/danh-muc',
