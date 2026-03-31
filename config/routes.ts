@@ -1,4 +1,4 @@
-﻿export default [
+export default [
 	{
 		path: '/user',
 		layout: false,
@@ -78,6 +78,33 @@
 		],
 		layout: false,
 		hideInMenu: true,
+	},
+	{
+		path: '/club-management',
+		name: 'Quản lý Câu lạc bộ',
+		icon: 'TeamOutlined',
+		routes: [
+			{
+				path: '/club-management/clubs',
+				name: 'Câu lạc bộ',
+				component: './ClubManagement/ClubList',
+			},
+			{
+				path: '/club-management/registrations',
+				name: 'Đơn đăng ký',
+				component: './ClubManagement/Registration',
+			},
+			{
+				path: '/club-management/members',
+				name: 'Thành viên',
+				component: './ClubManagement/Members',
+			},
+			{
+				path: '/club-management/statistics',
+				name: 'Thống kê',
+				component: './ClubManagement/Statistics',
+			},
+		],
 	},
 	{
 		path: '/',
