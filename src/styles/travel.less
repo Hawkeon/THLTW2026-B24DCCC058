@@ -1,0 +1,53 @@
+/* --- Premium Travel Theme --- */
+.travel-container {
+	background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+	min-height: 100vh;
+	padding: 24px;
+}
+
+.glass-card {
+	background: rgba(255, 255, 255, 0.7) !important;
+	backdrop-filter: blur(12px) saturate(180%) !important;
+	-webkit-backdrop-filter: blur(12px) saturate(180%) !important;
+	border: 1px solid rgba(255, 255, 255, 0.3) !important;
+	border-radius: 20px !important;
+	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1) !important;
+	overflow: hidden;
+	transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+
+	&:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.15) !important;
+	}
+}
+
+.premium-gradient-text {
+	background: linear-gradient(90deg, #1890ff, #722ed1);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-weight: 800;
+}
+
+.vibrant-btn {
+	background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+	border: none !important;
+	color: white !important;
+	font-weight: 600 !important;
+	box-shadow: 0 4px 15px rgba(118, 75, 162, 0.3) !important;
+	
+	&:hover {
+		opacity: 0.9;
+		transform: scale(1.02);
+	}
+}
+
+.destination-image-overlay {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 20px;
+	background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 100%);
+	color: white;
+}

@@ -1,4 +1,4 @@
-﻿export default [
+export default [
 	{
 		path: '/user',
 		layout: false,
@@ -57,6 +57,44 @@
 	// 	],
 	// },
 
+	{
+		path: '/travel-planning',
+		name: 'Lập kế hoạch Du lịch',
+		icon: 'CompassOutlined',
+		routes: [
+			{
+				path: '/travel-planning/explore',
+				name: 'Khám phá Điểm đến',
+				component: './Travel/Explore',
+			},
+			{
+				path: '/travel-planning/plan',
+				name: 'Lập Lịch trình',
+				component: './Travel/Plan',
+			},
+			{
+				path: '/travel-planning/budget',
+				name: 'Quản lý Ngân sách',
+				component: './Travel/Budget',
+			},
+			{
+				path: '/travel-planning/admin',
+				name: 'Quản trị hệ thống',
+				routes: [
+					{
+						path: '/travel-planning/admin/destinations',
+						name: 'Quản lý Điểm đến',
+						component: './Travel/Admin/DestinationList',
+					},
+					{
+						path: '/travel-planning/admin/statistics',
+						name: 'Thống kê & Báo cáo',
+						component: './Travel/Admin/Statistics',
+					},
+				],
+			},
+		],
+	},
 	{
 		path: '/notification',
 		routes: [
