@@ -1,4 +1,4 @@
-﻿export default [
+export default [
 	{
 		path: '/user',
 		layout: false,
@@ -41,6 +41,12 @@
 		name: 'TodoList',
 		icon: 'OrderedListOutlined',
 		component: './TodoList',
+	},
+	{
+		path: '/course',
+		name: 'Quản lý khóa học',
+		icon: 'BookOutlined',
+		component: './Course',
 	},
 
 	// DANH MUC HE THONG
