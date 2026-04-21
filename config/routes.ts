@@ -43,6 +43,37 @@
 		component: './TodoList',
 	},
 
+	// BLOG
+	{
+		path: '/blog',
+		name: 'Blog',
+		icon: 'BookOutlined',
+		routes: [
+			{
+				path: '/blog',
+				component: './Blog/Home',
+			},
+			{
+				path: '/blog/post/:slug',
+				component: './Blog/PostDetail',
+				hideInMenu: true,
+			},
+			{
+				path: '/blog/about',
+				component: './Blog/About',
+				hideInMenu: false,
+			},
+			{
+				path: '/blog/post-management',
+				component: './Blog/PostManagement',
+			},
+			{
+				path: '/blog/tag-management',
+				component: './Blog/TagManagement',
+			},
+		],
+	},
+
 	// DANH MUC HE THONG
 	// {
 	// 	name: 'DanhMuc',
