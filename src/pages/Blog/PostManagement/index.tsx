@@ -20,7 +20,7 @@ const PostManagement: React.FC = () => {
 	const debouncedSearch = useDebounce(searchText, 300);
 
 	useEffect(() => {
-		let result = [...posts];
+		let result = posts.filter((p) => p.author === 'John Doe');
 
 		if (debouncedSearch) {
 			const query = debouncedSearch.toLowerCase();
@@ -105,7 +105,6 @@ const PostManagement: React.FC = () => {
 					<Button
 						type='link'
 						icon={<EditOutlined />}
-						disabled={record.author !== 'John Doe'}
 						onClick={() => {
 							setRecord(record);
 							setVisible(true);
@@ -116,9 +115,8 @@ const PostManagement: React.FC = () => {
 						onConfirm={() => handleDelete(record._id)}
 						okText='Xóa'
 						cancelText='Hủy'
-						disabled={record.author !== 'John Doe'}
 					>
-						<Button type='link' danger icon={<DeleteOutlined />} disabled={record.author !== 'John Doe'} />
+						<Button type='link' danger icon={<DeleteOutlined />} />
 					</Popconfirm>
 				</Space>
 			),

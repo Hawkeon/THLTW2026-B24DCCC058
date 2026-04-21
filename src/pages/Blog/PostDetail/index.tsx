@@ -70,7 +70,7 @@ const PostDetail: React.FC = () => {
 			<Card style={{ textAlign: 'center', marginTop: 24 }}>
 				<Text>Bai viet khong ton tai.</Text>
 				<div style={{ marginTop: 16 }}>
-					<Button onClick={() => history.push('/blog')}>
+					<Button onClick={() => history.push('/blog/home')}>
 						<ArrowLeftOutlined /> Quay lai
 					</Button>
 				</div>
@@ -82,7 +82,7 @@ const PostDetail: React.FC = () => {
 
 	return (
 		<div style={{ padding: '24px 0' }}>
-			<Button icon={<ArrowLeftOutlined />} onClick={() => history.push('/blog')} style={{ marginBottom: 16 }}>
+			<Button icon={<ArrowLeftOutlined />} onClick={() => history.push('/blog/home')} style={{ marginBottom: 16 }}>
 				Quay lai
 			</Button>
 

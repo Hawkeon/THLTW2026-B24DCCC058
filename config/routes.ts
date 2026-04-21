@@ -51,9 +51,13 @@ export default [
 		routes: [
 			{
 				path: '/blog',
+				redirect: '/blog/home',
+				exact: true,
+			},
+			{
+				path: '/blog/home',
 				name: 'Trang chủ',
 				component: './Blog/Home',
-				exact: true,
 			},
 			{
 				path: '/blog/post/:slug',
