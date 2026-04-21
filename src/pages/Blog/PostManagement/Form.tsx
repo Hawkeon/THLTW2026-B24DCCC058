@@ -57,7 +57,7 @@ const PostManagementForm: React.FC<PostManagementFormProps> = ({
 			content: values.content,
 			thumbnail: values.thumbnail,
 			tags: values.tags,
-			author: 'Anonymous',
+			author: 'John Doe',
 			status: postStatus,
 		};
 

@@ -1,4 +1,4 @@
-﻿export default [
+export default [
 	{
 		path: '/user',
 		layout: false,
@@ -51,7 +51,9 @@
 		routes: [
 			{
 				path: '/blog',
+				name: 'Trang chủ',
 				component: './Blog/Home',
+				exact: true,
 			},
 			{
 				path: '/blog/post/:slug',
@@ -60,15 +62,18 @@
 			},
 			{
 				path: '/blog/about',
+				name: 'Về Tác Giả',
 				component: './Blog/About',
 				hideInMenu: false,
 			},
 			{
 				path: '/blog/post-management',
+				name: 'Quản lý Bài viết',
 				component: './Blog/PostManagement',
 			},
 			{
 				path: '/blog/tag-management',
+				name: 'Quản lý Tags',
 				component: './Blog/TagManagement',
 			},
 		],

@@ -1,6 +1,7 @@
-import { Card, Col, Input, Pagination, Row, Tag } from 'antd';
+import { Card, Col, Input, Pagination, Row, Tag, Button } from 'antd';
 import { useState, useMemo } from 'react';
-import { SearchOutlined } from '@ant-design/icons';
+import { SearchOutlined, EditOutlined } from '@ant-design/icons';
+import { history } from 'umi';
 import PostCard from '@/components/Blog/PostCard';
 import { useDebounce } from '@/hooks/useDebounce';
 import blogPostModel from '@/models/blogPost';
@@ -61,6 +62,12 @@ const BlogHome: React.FC = () => {
 
 	return (
 		<div style={{ padding: '24px 0' }}>
+			<div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: 16 }}>
+				<Button type='primary' icon={<EditOutlined />} onClick={() => history.push('/blog/post-management')}>
+					Quản lý bài viết
+				</Button>
+			</div>
+
 			<Card style={{ marginBottom: 24 }}>
 				<Row gutter={[16, 16]} align='middle'>
 					<Col xs={24} md={12}>

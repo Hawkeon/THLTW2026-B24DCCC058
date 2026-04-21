@@ -90,6 +90,12 @@ const PostManagement: React.FC = () => {
 			render: (date: string) => new Date(date).toLocaleDateString('vi-VN'),
 		},
 		{
+			title: 'Tác giả',
+			dataIndex: 'author',
+			key: 'author',
+			width: 120,
+		},
+		{
 			title: 'Hành động',
 			key: 'action',
 			width: 100,
@@ -99,6 +105,7 @@ const PostManagement: React.FC = () => {
 					<Button
 						type='link'
 						icon={<EditOutlined />}
+						disabled={record.author !== 'John Doe'}
 						onClick={() => {
 							setRecord(record);
 							setVisible(true);
@@ -109,8 +116,9 @@ const PostManagement: React.FC = () => {
 						onConfirm={() => handleDelete(record._id)}
 						okText='Xóa'
 						cancelText='Hủy'
+						disabled={record.author !== 'John Doe'}
 					>
-						<Button type='link' danger icon={<DeleteOutlined />} />
+						<Button type='link' danger icon={<DeleteOutlined />} disabled={record.author !== 'John Doe'} />
 					</Popconfirm>
 				</Space>
 			),
