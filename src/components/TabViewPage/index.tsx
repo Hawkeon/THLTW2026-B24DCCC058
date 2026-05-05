@@ -3,6 +3,7 @@ import NotAccessible from '@/pages/exception/403';
 import { Affix, Card, Tabs } from 'antd';
 import React, { useEffect, useState } from 'react';
 import type { TabViewPageProps } from './typing';
+import type { ReactNode } from 'react';
 
 const PermissionWrapper = (props: { content: JSX.Element; accessCode?: string }) => {
 	const { accessCode, content } = props;
@@ -17,10 +18,11 @@ export const TabViewPage = (props: {
 	menu: TabViewPageProps[];
 	cardTitle?: string;
 	hideCard?: boolean;
+	extra?: ReactNode;
 	onChange?: (key: string) => void;
 	children?: React.ReactNode;
 }) => {
-	const { menu, hideCard, children, onChange, cardTitle } = props;
+	const { menu, hideCard, children, onChange, cardTitle, extra } = props;
 	const [tabActive, setTabActive] = useState<string | undefined>(menu[0]?.menuKey);
 	const [currentTitle, setCurrentTitle] = useState(getTitle(cardTitle, menu[0]?.title));
 	const paths = menu.map((item) => item.menuKey);
@@ -67,5 +69,5 @@ export const TabViewPage = (props: {
 	);
 
 	if (hideCard) return mainContent();
-	return <Card title={currentTitle}>{mainContent()}</Card>;
+	return <Card title={currentTitle} extra={extra}>{mainContent()}</Card>;
 };
